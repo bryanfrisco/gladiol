@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            content="Gladiola by PT. Gladiol Alam Nusantara is a marketplace that sells varieties of products produced by high-quality Indonesian Manufactures"
+            name="description" />
+        <title>GLADIOLA - OVL Grade Plywood</title>
+        <link rel="icon" type="image/x-icon" href="/assets/gladiol-logo.svg" />
+
+        <!-- CSS Dependency -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/font-awesome/css/fontawesome.css" rel="stylesheet" />
+        <link href="/assets/font-awesome/css/brands.css" rel="stylesheet" />
+        <link href="/assets/font-awesome/css/solid.css" rel="stylesheet" />
+        <link href="/assets/fancy-box/jquery.fancybox.min.css" rel="stylesheet" />
+        <link href="/assets/animate/animate.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/loader.css" />
+        <link rel="stylesheet" href="/css/navbar-page.css" />
+        <link rel="stylesheet" href="/css/animated-bg.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
+        <link rel="stylesheet" href="/products/product.css" />
+
+        <!-- JS Dependency -->
+        <script src="/assets/jQuery/jquery.min.js"></script>
+        <script src="/assets/fancy-box/jquery.fancybox.min.js"></script>
+        <script src="/js/loader.js"></script>
+        <script src="/js/language_check.js"></script>
+        <script src="/js/scroll.js"></script>
+    </head>
+
+    <!-- Main Body -->
+    <body>
+        <!-- Animation -->
+        <div class="load-animation">
+            <img src="/assets/gladiol-logo-petal-only.svg" alt="" class="gladiol-loader" />
+        </div>
+
+        <!-- Background -->
+        <div class="bg-wrapper">
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <img src="/assets/media/gladiol_logo_no_text.png" alt="" />
+        </div>
+
+        <!-- Navbar -->
+        <nav class="fancy-navbar container-fluid">
+            <div class="navbar-head d-flex justify-content-between align-items-center px-3">
+                <div class="lang-container">
+                    <div class="lang-switcher">
+                        <a href="/language.html" class="fa-solid fa-language nav-lang"></a>
+                    </div>
+                </div>
+                <a href="/" class="nav-logo"><img src="/assets/gladiol-logo.svg " alt="Gladiola Commodity" /></a>
+                <div class="blank-space fa-solid fa-language"></div>
+                <input type="checkbox" class="nav-button fas fa-bars" />
+            </div>
+            <div class="navbar-content d-flex flex-column align-items-start justify-content-center">
+                <a href="/" data-text="Home">Home</a>
+                <a lang="en" href="/about.html" data-text="About">About</a>
+                <a lang="en" href="/service.html" data-text="Service">Service</a>
+                <a lang="en" href="/products.html" data-text="Products">Products</a>
+                <a lang="en" href="/contact.html" data-text="Contact Us">Contact Us</a>
+                <a lang="id" href="/about.html" data-text="Tentang Kami">Tentang Kami</a>
+                <a lang="id" href="/service.html" data-text="Layanan">Layanan</a>
+                <a lang="id" href="/products.html" data-text="Produk">Produk</a>
+                <a lang="id" href="/contact.html" data-text="Hubungi Kami">Hubungi Kami</a>
+                <div class="navbar-bg-img"></div>
+            </div>
+        </nav>
+        <nav class="nav-up">
+            <a href="#">
+                <div class="nav-up-button">
+                    <i class="fa-solid fa-caret-up"></i>
+                </div>
+            </a>
+        </nav>
+
+        <section id="product-detail">
+            <div class="container">
+                <div class="product-heading text-center">
+                    <h2 class="heading">Product Details</h2>
+                    <nav style="--bs-breadcrumb-divider: '>'">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Home</a></li>
+                            <li lang="en" class="breadcrumb-item"><a href="/products.html" class="text-decoration-none">Products</a></li>
+                            <li lang="id" class="breadcrumb-item"><a href="/products.html" class="text-decoration-none">Produk</a></li>
+                            <li class="breadcrumb-item active">OVL-Grade Plywood</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="row align-items-center py-5">
+                    <div class="col-md-6">
+                        <div id="productCarousel" class="carousel slide" data-bs-ride="true">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"></button>
+                                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../assets/media/products/item-1.png" class="d-block w-100 rounded" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../assets/media/products/item-2.png" class="d-block w-100 rounded" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../assets/media/products/item-3.png" class="d-block w-100 rounded" />
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-id">
+                            <p lang="en" class="new-arrival my-0 text-center">NEW</p>
+                            <p lang="id" class="new-arrival my-0 text-center">BARU</p>
+                            <h2 class="product-name">OVL-Grade Plywood</h2>
+                            <p class="product-code">CNT-PLWD-K-OVL</p>
+                            <p lang="en" class="product-stock">Stock Available</p>
+                            <p lang="id" class="product-stock">Stok Tersedia</p>
+                        </div>
+                        <!-- <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div> -->
+                        <div class="product-detail">
+                            <h3 class="detail-heading">Details</h3>
+                            <p lang="en" class="product-description">
+                                Plywood is a processed wood material made from prefabricated boards consisting of several layers of wood through a high pressure gluing and
+                                compression process. Plywood has great strength and high dimensional stability. Plywood is lightweight, easy to combine with other materials, easy
+                                to process, resistant to temperature changes, and has an aesthetic appearance.
+                            </p>
+                            <p lang="en" class="product-description">
+                                Plywood has a wide selection of sizes and thicknesses that are more varied. Plywood is often used as a building material or furniture making
+                                material. For building materials, plywood can be used as a structural part for floors, beams, formwork (molding), and panels. Plywood can be used
+                                for building construction as paneling (room dividers, doors, windows), coating materials, floors, walls and for the construction of transportation
+                                equipment such as; aircraft (inner cladding), trains (roof, floor, walls), trucks and trailers (for bodies).
+                            </p>
+                            <p lang="id" class="product-description">
+                                Plywood adalah material dari olahan kayu yang terbuat dari papan pabrikan yang terdiri dari beberapa lapisan kayu melalui proses perekatan dan
+                                pemampatan tekanan tinggi. Plywood adalah material dari olahan kayu yang terbuat dari papan pabrikan yang terdiri dari beberapa lapisan kayu melalui
+                                proses perekatan dan pemampatan tekanan tinggi.Plywood bersifat ringan, mudah dipadukan dengan bahan lain, mudah diproses, tahan terhadap perubahan
+                                suhu, dan memiliki tampilan yang estetis.
+                            </p>
+                            <p lang="id" class="product-description">
+                                Plywood memiliki berbagai pilihan ukuran dan ketebalan yang lebih bervariasi. Plywood kerap digunakan sebagai material bahan bangunan ataupun bahan
+                                pembuat furniture. Untuk material bahan bangunan, plywood bisa digunakan sebagai bagian struktur untuk lantai, balok, bekisting (cetakan), dan
+                                panel. kayu lapis dapat digunakan untuk kontruksi bangunan sebagai paneling (penyekat ruang, pintu, jendela), bahan pelapis, lantai, dinding dan
+                                untuk konstruksi alat-alat transportasi seperti; pesawat terbang (pelapis dinding dalam), kereta api (atap, lantai, dinding), truk dan trailer
+                                (untuk body).
+                            </p>
+                        </div>
+                        <div class="product-keyword">
+                            <h3 class="keyword-heading">Tags</h3>
+                            <div class="d-flex justify-content-center justify-content-md-start">
+                                <span class="keywords">Plywood</span>
+                                <span class="keywords">OVL-Grade</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="estimate-price text-center">
+                    <a lang="en" href="" data-bs-toggle="modal" data-bs-target="#estimate-modal" class="btn py-2 px-4">Estimate My Price</a>
+                    <a lang="id" href="" data-bs-toggle="modal" data-bs-target="#estimate-modal" class="btn py-2 px-4">Perkirakan Harga Saya</a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="estimate-modal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 w-100 text-center text-uppercase fw-bold">OVL-Grade Plywood</h1>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid position-relative">
+                                        <div class="row align-items-center py-xl-5">
+                                            <div class="col-xl-6 order-2 order-xl-1">
+                                                <div class="estimate mt-5">
+                                                    <h2 lang="en">Estimated Price</h2>
+                                                    <h2 lang="id">Perkiraan Harga</h2>
+                                                    <p class="USD">(USD)</p>
+                                                    <p class="price-fill">$ <span id="price-fill">0</span>*</p>
+                                                    <p lang="en" class="price-pcs">Roughly Equal to $ <span id="price-pcs">0</span> / pcs*</p>
+                                                    <p lang="id" class="price-pcs">Setara dengan $ <span id="price-pcs">0</span> / pcs*</p>
+                                                    <div class="mt-5">
+                                                        <a lang="en" href="/contact.html" class="btn py-2 px-4 submit-interest">I'm Interested!</a>
+                                                        <a lang="id" href="/contact.html" class="btn py-2 px-4 submit-interest">Saya Tertarik!</a>
+                                                    </div>
+                                                    <div class="mt-xl-5">
+                                                        <button lang="en" type="button" class="btn btn-outline-dark border-0 rounded-0" data-bs-dismiss="modal">No Thanks!</button>
+                                                        <button lang="id" type="button" class="btn btn-outline-dark border-0 rounded-0" data-bs-dismiss="modal">
+                                                            Tidak, Terimakasih!
+                                                        </button>
+                                                    </div>
+                                                    <div class="disclaimer">
+                                                        <h4 lang="en">
+                                                            *Prices are excluded from Freight Costs and local taxes for export transactions. Prices can be different between each
+                                                            region.
+                                                        </h4>
+                                                        <h4 lang="id">
+                                                            *Harga belum termasuk biaya pengiriman dan pajak terkait transaksi ekspor. Harga dapat berbeda antar wilayah.
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 selection order-1 order-xl-2">
+                                                <div class="material-select">
+                                                    <h4 lang="en">Material Selection</h4>
+                                                    <h4 lang="id">Pilihan Material</h4>
+                                                    <div class="radio-tile-group">
+                                                        <div class="input-container">
+                                                            <input id="all" type="radio" name="mat-radio" value="all" />
+                                                            <div class="radio-tile">
+                                                                <label for="all">All MLH</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-container">
+                                                            <input id="fcc-mlh" type="radio" name="mat-radio" value="fcc-mlh" />
+                                                            <div class="radio-tile">
+                                                                <label for="fcc-mlh">Core Combi Falcata & MLH</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-container">
+                                                            <input id="fcc" type="radio" name="mat-radio" value="fcc" />
+                                                            <div class="radio-tile">
+                                                                <label for="fcc">Core Falcata</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="glue-select">
+                                                    <h4 lang="en">Glue Type</h4>
+                                                    <h4 lang="id">Jenis Lem</h4>
+                                                    <div class="radio-tile-group">
+                                                        <div class="input-container">
+                                                            <input id="wbp" type="radio" name="glue-radio" value="wbp" />
+                                                            <div class="radio-tile">
+                                                                <label for="wbp">WBP (Water Boiled Proof)</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-container">
+                                                            <input id="t2fe" type="radio" name="glue-radio" value="t2fe" />
+                                                            <div class="radio-tile">
+                                                                <label for="t2fe">T2FE0.3</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-0">
+                                                    <div class="col-xl-6">
+                                                        <div class="thickness-select">
+                                                            <h4 lang="en">Plywood Thickness</h4>
+                                                            <h4 lang="id">Ketebalan Plywood</h4>
+                                                            <div class="dropdown">
+                                                                <div class="dropdown-select">
+                                                                    <span class="selected">4 mm</span>
+                                                                    <div class="caret"></div>
+                                                                </div>
+                                                                <ul class="dropdown-main">
+                                                                    <li class="dropdown-active">4 mm</li>
+                                                                    <li>6 mm</li>
+                                                                    <li>9 mm</li>
+                                                                    <li>12 mm</li>
+                                                                    <li>15 mm</li>
+                                                                    <li>18 mm</li>
+                                                                    <li>21 mm</li>
+                                                                    <li>24 mm</li>
+                                                                    <li>30 mm</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <div class="quantity-select">
+                                                            <h4>Qty (m<sup>3</sup>)</h4>
+                                                            <div class="number-select">
+                                                                <i class="fa-solid fa-caret-left decrement"></i>
+                                                                <input class="num-input" type="number" value="0" min="0" max="210" step="1" />
+                                                                <i class="fa-solid fa-caret-right increment"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="headline container-fluid d-flex align-items-center justify-content-center">
+                    <div class="headline-wrapper">
+                        <h2 lang="en" class="heading text-center text-uppercase">Certified With</h2>
+                        <h2 lang="id" class="heading text-center text-uppercase">Tersertifikasi Oleh</h2>
+                    </div>
+                </div>
+                <div class="certification mb-5 container">
+                    <div class="row justify-content-center">
+                        <div class="col-6 col-md-4 col-lg-2 my-auto">
+                            <a href="" cert="carb" data-bs-toggle="modal" data-bs-target="#certModal" class="cert-pop">
+                                <img class="img-fluid carb" src="/assets/media/cert/CARB-Logo.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 my-auto">
+                            <a href="" cert="ce" data-bs-toggle="modal" data-bs-target="#certModal" class="cert-pop">
+                                <img class="img-fluid" src="/assets/media/cert/CE.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 my-auto">
+                            <a href="" cert="fsc" data-bs-toggle="modal" data-bs-target="#certModal" class="cert-pop">
+                                <img class="img-fluid" src="/assets/media/cert/FSC.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 my-auto">
+                            <a href="" cert="i91" data-bs-toggle="modal" data-bs-target="#certModal" class="cert-pop">
+                                <img class="img-fluid" src="/assets/media/cert/ISO-9001.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="d-none d-lg-block"></div>
+                        <div class="col-6 col-md-4 col-lg-2 my-auto">
+                            <a href="" cert="i141" data-bs-toggle="modal" data-bs-target="#certModal" class="cert-pop">
+                                <img class="img-fluid" src="/assets/media/cert/ISO-14001.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 my-auto">
+                            <a href="" cert="jas" data-bs-toggle="modal" data-bs-target="#certModal" class="cert-pop">
+                                <img class="img-fluid" src="/assets/media/cert/JAS.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2 my-auto">
+                            <a href="" cert="i274" data-bs-toggle="modal" data-bs-target="#certModal" class="cert-pop">
+                                <img class="img-fluid" src="/assets/media/cert/ISO-2074.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cert Modal -->
+        <div class="modal fade" id="certModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 lang="en" class="modal-title fs-5 w-100 text-center text-uppercase fw-bold">Certification Information</h5>
+                        <h5 lang="id" class="modal-title fs-5 w-100 text-center text-uppercase fw-bold">Informasi Sertifikasi</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center p-4">
+                            <div class="col-lg-6">
+                                <div class="d-flex justify-content-center">
+                                    <img src="" class="cert-img img-fluid" id="cert-imagePrev" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <h3 class="cert-title text-center"></h3>
+                                <p class="cert-desc text-justify"></p>
+                                <div class="cert-button d-flex align-items-center justify-content-center">
+                                    <a href="" class="cert-link btn py-2 px-4">Learn More</a>
+                                    <a lang="id" href="" class="cert-link btn py-2 px-4">Pelajari Lebih Lanjut</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-5">
+            <div class="footer container text-center text-md-start">
+                <div class="main row text-center text-md-start">
+                    <div class="col-12 col-md-4 col-lg-4 col-xl-4 mx-auto mt-md-3 align-self-start">
+                        <div class="company-footer">
+                            <img src="/assets/gladiol-logo.svg" alt="" class="img-fluid" />
+                            <h5 class="text-uppercase">Gladiol Nature Commodity</h5>
+                            <p lang="en">For Mutual Growth and Success!</p>
+                            <p lang="id">Untuk Pertumbuhan dan Kesuksesan Bersama!</p>
+                            <p>Taman Kopo Indah 1 Blok N no. 45, Bandung, West Java</p>
+                            <div class="contact">
+                                <a href="mailto:contact@gladiola.store">
+                                    <p>contact@gladiola.store</p>
+                                </a>
+                                <a href="tel:+6281212742769">
+                                    <p>+62-812-1274-2769</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 align-self-center">
+                        <div class="link-1">
+                            <p>
+                                <a lang="en" href="/about.html">About</a>
+                                <a lang="id" href="/about.html">Tentang Kami</a>
+                            </p>
+                            <p>
+                                <a lang="en" href="/service.html">Services</a>
+                                <a lang="id" href="/service.html">Layanan</a>
+                            </p>
+                            <p>
+                                <a lang="en" href="/products.html">Products</a>
+                                <a lang="id" href="/products.html">Produk</a>
+                            </p>
+                            <p>
+                                <a lang="en" href="/certifications.html">Certifications</a>
+                                <a lang="id" href="/certifications.html">Sertifikasi</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 align-self-center">
+                        <div class="link-2"></div>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-md-3">
+                        <div class="company-contact">
+                            <h5 lang="en">See What You Like?</h5>
+                            <h5 lang="id">Suka dengan yang anda lihat?</h5>
+                            <p lang="en">We are more than happy to serve you. Let us reach you by filling this sign form so we could know each other better.</p>
+                            <p lang="id">Kami senang membantu anda. Izinkan kami menghubungi anda dengan mengisi form dibawah ini.</p>
+                            <a lang="en" href="/contact.html" class="btn btn-md py-2 px-4 float-md-start" role="button">I'm Interested</a>
+                            <a lang="id" href="/contact.html" class="btn btn-md py-2 px-4 float-md-start" role="button">Saya Tertarik</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright row align-items-center justify-content-center text-center mt-3">
+                    <div class="col-md-7 col-lg-8">
+                        <p>
+                            &copy;
+                            <script>
+                                new Date().getFullYear() && document.write(new Date().getFullYear());
+                            </script>
+                            <span>Gladiol</span> All Right Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- <script type="module" src="/js/main.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="product.js"></script>
+        <script src="OVL-Grade.js"></script>
+    </body>
+</html>

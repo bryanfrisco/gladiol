@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
+
+:root {
+    --white : #fff;
+    --primary : #037f5f;
+    --secondary : #d9e693;
+    --ternary : #a8cb38;
+    --bounce : cubic-bezier(.72,-0.46,.45,1.83);
+    --cubic-ease: cubic-bezier(.69,0,.29,.99);
+    --cubic-out: cubic-bezier(0,1.13,1,.99);
+}
+
+/* Utility Class */
+body {
+    background: #EEE;
+    overflow: hidden !important;
+    max-height: 100vh;
+}
+
+.cls-1 {
+    fill: var(--white);
+}
+
+.cls-2 {
+    fill: var(--primary);
+}
+
+.cls-3 {
+    fill: var(--secondary);
+}
+
+.cls-4 {
+    fill: var(--ternary);
+}
+
+/* Base Preloader */
+#preloader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Fredoka', sans-serif;
+}
+
+#preloader h1 {
+    user-select: none;
+    --bg-size: 400%;
+    font-size: 3rem;
+    text-transform: uppercase;
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--ternary),
+        var(--primary)
+    ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: fancyText 30s infinite linear;
+}
+
+svg#gladiol {
+    max-height: 45vh;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+#language-selector {
+    position: relative;
+    z-index: 1;
+    top: -35vh;
+}
+
+#language-selector .row img {
+    height: 12vw;
+    border-radius: 2rem;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 1em;
+}
+
+#language-selector h2 {
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: -1;
+    transform: translateY(-150%);
+    transition: all 0.3s ease-in-out;
+}
+
+#language-selector #ENG-BUTTON {
+    --glow-color: #3974ff;
+    animation: glowing 5s infinite;
+}
+
+#language-selector #ENG-BUTTON:hover {
+    --glow-color: #3974ff;
+    box-shadow: 0 0 40px var(--glow-color);
+    animation: none
+}
+
+#language-selector #IDR-BUTTON {
+    --glow-color: #FF0000;
+    animation: glowing 5s infinite;
+}
+
+#language-selector #IDR-BUTTON:hover {
+    --glow-color: #FF0000;
+    box-shadow: 0 0 40px var(--glow-color);
+    animation: none
+}
+
+#language-selector .ENG {
+    --bg-size: 200%;
+    background: linear-gradient(
+        90deg,
+        #C8102E,
+        #3974ff,
+        #C8102E
+    ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: fancyText 30s infinite linear;
+}
+
+#language-selector .IDR {
+    --bg-size: 200%;
+    background: linear-gradient(
+        90deg,
+        #C8102E,
+        #cc6f7e,
+        #C8102E
+    ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: fancyText 30s infinite linear;
+}
+
+#language-selector .row img:hover {
+    transform: translateY(-5%);
+    cursor: pointer;
+}
+
+#language-selector .row img:hover + h2 {
+    transform: translateY(10%);
+}
+
+/* Animation */
+#rec-outline {
+    animation: fadeInDownR 1s var(--bounce) both;
+}
+
+#rect-base {
+    transform-origin: center;
+    animation: zoomIn 0.8s var(--cubic-ease) both;
+    animation-delay: 0.5s;
+}
+
+#rect-vert {
+    transform-origin: center;
+    animation: zoomIn 0.8s var(--cubic-ease) both;
+    animation-delay: 0.7s;
+}
+
+#rect-horz {
+    transform-origin: center;
+    animation: zoomIn 0.8s var(--cubic-ease) both;
+    animation-delay: 0.9s;
+}
+
+#flower {
+    transform-origin: center;
+    animation: rotateIn 1.2s var(--cubic-out) both;
+    animation-delay: 1.5s;
+}
+
+#petal-1, #petal-2, #petal-3 {
+    transform-origin: center;
+    animation: zoomIn 0.7s var(--cubic-ease) both;
+    animation-delay: calc(1700ms + (var(--order) * 30ms));
+}
+
+#petal-s1, #petal-s2, #petal-s3 {
+    transform-origin: center;
+    animation: zoomIn 0.7s var(--cubic-ease) both;
+    animation-delay: calc(1800ms + (var(--order) * 100ms));
+}
+
+#preloader .headline {
+    animation: fadeDown 0.7s var(--cubic-ease) both;
+    animation-delay: 2.3s;
+}
+
+#preloader {
+    animation: asideUp 1s var(--cubic-ease) both;
+    animation-delay: 3.5s;
+}
+
+#language-selector {
+    animation: revealUp 1s var(--cubic-ease) both;
+    animation-delay: 4s;
+}
+
+#poly-bg {
+    position: absolute;
+    display: none;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+#poly-bg div {
+    position: absolute;
+}
+
+.big {
+    height: 1200px;
+    width: 1200px;
+}
+
+.small {
+    height: 200px;
+    width: 200px;
+}
+
+.hex-1 {
+    top: -150vh;
+    right: -80vw;
+    background: var(--primary);
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    animation: fadeRight 1s var(--cubic-ease) both;
+    animation-delay: 2.5s;
+}
+
+.hex-2 {
+    top: -4vh;
+    right: -12vw;
+    background: var(--secondary);
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    animation: fadeRight 1s var(--cubic-ease) both;
+    animation-delay: 3s;
+}
+
+.hex-3 {
+    bottom: -150vh;
+    left: -80vw;
+    background: var(--primary);
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    animation: fadeLeft 1s var(--cubic-ease) both;
+    animation-delay: 2.5s;
+}
+
+.hex-4 {
+    bottom: -4vh;
+    left: -12vw;
+    background: var(--secondary);
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    animation: fadeLeft 1s var(--cubic-ease) both;
+    animation-delay: 3s;
+}
+
+/* Responsive */
+@media screen and (min-width: 568px) {
+    #language-selector .row img {
+        height: 10vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #language-selector .row img {
+        height: 8vw;
+    }
+    #poly-bg {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 998px) {
+    #language-selector .row img {
+        height: 7vw;
+    }
+    .hex-1 {
+        right: -65vw;  
+    }
+    .hex-2 {
+        right: -12vw;
+    }
+    .hex-3 {
+        left: -65vw;
+    }
+    .hex-4 {
+        left: -12vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #language-selector .row img {
+        height: 6.5vw;
+    }
+    .hex-1 {
+        right: -45vw;  
+    }
+    .hex-2 {
+        right: -5vw;
+    }
+    .hex-3 {
+        left: -45vw;
+    }
+    .hex-4 {
+        left: -5vw;
+    }
+}
+
+/* Keyframes */
+@keyframes fadeInDownR {
+    0% {
+        opacity: 0;
+        transform: translateY(-20%) rotate(10deg);
+    }
+    50% {
+        transform: translateY(-16%) rotate(8deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    0% {
+        opacity: 0;
+        transform: rotate(-180deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fancyText {
+    to {
+        background-position: var(--bg-size) 0;
+    }
+}
+
+@keyframes asideUp {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        transform: translateY(-15%) scale(0.7);
+    }
+}
+
+@keyframes revealUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15%) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes glowing {
+    0% { box-shadow: 0 0 -10px var(--glow-color); }
+    40% { box-shadow: 0 0 25px var(--glow-color); }
+    60% { box-shadow: 0 0 25px var(--glow-color); }
+    100% { box-shadow: 0 0 -10px var(--glow-color); }
+}

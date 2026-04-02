@@ -1,0 +1,370 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Poppins:wght@200;400;700&display=swap');
+
+:root {
+    /* Color */
+    --primary: 23, 121, 86;
+    --secondary: 162, 210, 174;
+    --black: 1, 1, 1;
+    --gray: 150, 150, 150;
+    --white: 255, 255, 255;
+    --body: 254, 254, 254;
+    --opacity-0: 0;
+    --opacity-1: 0.25;
+    --opacity-2: 0.40;
+    --opacity-3: 0.50;
+    --opacity-4: 0.60;
+    --opacity-5: 0.75;
+    --opacity:1;
+    
+    /* Font */
+    --main-font: 'Poppins', sans-serif;
+    --headline-font: 'Fredoka', sans-serif;
+}
+
+/* General CSS */
+html {
+    overflow-y: overlay;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(var(--black), var(--opacity-2));
+    /* border-radius: 10px; */
+    background-color: rgb(var(--white));
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(var(--white));
+}
+
+::-webkit-scrollbar-thumb {
+    /* border-radius: 10px; */
+    background: rgb(var(--primary));
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold !important;
+}
+
+a {
+    color: rgb(var(--primary));
+}
+
+a:hover {
+    color: rgb(var(--secondary));
+}
+
+
+/* Main About */
+section#service {
+    padding-top: 15vh;
+}
+
+section .heading.text-center {
+    padding: 0 5%;
+}
+
+section .heading.text-center h1 {
+    font-size: 2.5rem;
+}
+
+section .heading.text-center p {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.gallery {
+    margin: 3rem 0 !important;
+}
+
+.card {
+    margin: 1rem 0;
+}
+
+.card-bg-wrapper {
+    padding: 1.75rem;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+.card-bg-wrapper::before {
+    transform: scale(1);
+    content: '';
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background: rgba(var(--black), var(--opacity));
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.card-bg-wrapper:hover::before {
+    transform: rotate(20deg);
+    background-color: rgb(var(--primary));;
+}
+
+.s-box {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.s-box:hover {
+    transform: translateY(-0.5rem);
+}
+
+.s-box i {
+    font-size: 3rem;
+    border: 1px solid rgba(var(--black), var(--opacity-1));
+    border-radius: 50%;
+    padding: 1.25rem;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.s-box:hover i {
+    color: rgb(var(--primary));
+}
+
+.s-box h3 {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 200 !important;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.s-box:hover h3 {
+    color: rgb(var(--primary));
+}
+
+.s-box p {
+    text-align: justify;
+    font-size: 0.9rem;
+    text-justify: inter-word;
+    color: rgba(var(--black), var(--opacity-4));
+}
+
+.s-box a {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 0;
+    color: rgb(var(--white));
+    box-shadow: 0 0 1px rgb(var(--gray));
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    box-shadow: 400px 0 0 rgb(var(--black)) inset;
+}
+
+.s-box a:hover {
+    box-shadow: 400px 0 0 rgb(var(--primary)) inset;
+    color: rgb(var(--white));
+}
+
+.values {
+    margin-top: 60px;
+}
+
+.f-icon {
+    font-size: 7rem;
+    color: rgb(var(--primary));
+}
+
+.values::before {
+    display: block;
+    width: 100%;
+    height: 0.9rem;
+    content: "";
+    border-top: 2px solid rgb(var(--black));
+    border-left: 2px solid rgb(var(--black));
+}
+
+.values h4 {
+    font-weight: 200 !important;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.inner h2 {
+    text-align: center;
+}
+
+.vision-card {
+    display: inline-block;
+    padding: 0.9rem;
+    background-size: 200% 200%;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.vision-card::before {
+    display: block; 
+    width: 100%;
+    height: 0.5rem;
+    content: "";
+    border-left: 2px solid rgb(var(--black));
+    border-top: 2px solid rgb(var(--black));
+}
+
+.vision-card.right::before {
+    border-left: none;
+    border-right: 2px solid rgb(var(--black));
+}
+
+.vision-card.right p, .vision-card.right h3 {
+    text-align: end;
+}
+
+#vc-1, #vc-3, #vc-5 {
+    background-image: linear-gradient(to top, rgb(var(--primary)) 50%, transparent 0);
+    background-position: top;
+}
+
+#vc-1:hover, #vc-3:hover, #vc-5:hover {
+    background-position: bottom;
+    color: rgb(var(--white));
+}
+
+#vc-2, #vc-4 {
+    background-image: linear-gradient(to top, rgb(var(--gray)) 50%, transparent 0);
+    background-position: top;
+}
+
+#vc-2:hover, #vc-4:hover {
+    background-position: bottom;
+    color: rgb(var(--white));
+}
+
+
+.vision-card p.head {
+    font-weight: 200 !important;
+    text-transform: uppercase;
+    margin-bottom: 0.1rem;
+}
+
+.vision-card p.number {
+    font-weight: 200 !important;
+    text-transform: lowercase;
+    margin-bottom: 2rem;
+}
+
+.vision-card h3 {
+    font-size: 1.2rem;
+}
+
+.vision-card p.desc, .vision-card.right p.desc {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* Responsive */
+@media screen and (min-width: 576px) {
+    section#service {
+        padding-top: 20vh;
+    }
+    section .heading.text-center h1 {
+        font-size: 2.7rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section#service {
+        padding-top: 25vh;
+    }
+    section .heading.text-center h1 {
+        font-size: 3rem;
+    }
+    section .heading.text-center p {
+        font-size: 1.1rem;
+    }
+    .card.highlight-feature {
+        margin-top: 0rem;
+    }
+    .card.highlight-feature .s-box i {
+        font-size: 3.5rem;
+    }
+    
+    .card.highlight-feature .s-box h3 {
+        font-size: 1.5rem;
+    }
+    
+    .card.highlight-feature .s-box p {
+        font-size: 1.1rem;
+    }
+    
+    .card.highlight-feature .s-box a {
+        font-size: 1.1rem;
+    }
+    .values {
+        margin-top: 90px;
+    }
+    .values h4 {
+        text-align: start;
+    }
+    .values.right h4 {
+        text-align: end;
+    }
+    .inner h2 {
+        text-align: start;
+    }
+    .values.right .inner h2 {
+        text-align: end;
+    }
+    .values.right::before {
+        border-left: none;
+        border-right: 2px solid rgb(var(--black));
+    }
+    .vision-card.right::before {
+        border-left: none;
+        border-right: 2px solid rgb(var(--black));
+    }
+    .vision-card.right p, .vision-card.right h3 {
+        text-align: end;
+    }
+    .vision-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    section#service {
+        padding-top: 30vh;
+    }
+    section .heading.text-center h1 {
+        font-size: 3.5rem;
+    }
+    section .heading.text-center p {
+        font-size: 1.2rem;
+    }
+    .f-icon {
+        font-size: 10rem;
+    }
+    .values {
+        margin-top: 120px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    section .heading.text-center h1 {
+        font-size: 4rem;
+    }
+    section .heading.text-center p {
+        font-size: 1.4rem;
+    }
+    .f-icon {
+        font-size: 14rem;
+    }
+    .card {
+        margin: 1.75rem 0;
+    }
+}

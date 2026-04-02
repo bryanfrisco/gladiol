@@ -1,0 +1,526 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Poppins:wght@200;400;700&display=swap');
+
+:root {
+    /* Color */
+    --primary: 23, 121, 86;
+    --secondary: 162, 210, 174;
+    --black: 1, 1, 1;
+    --gray: 150, 150, 150;
+    --white: 255, 255, 255;
+    --body: 254, 254, 254;
+    --opacity-0: 0;
+    --opacity-1: 0.25;
+    --opacity-2: 0.40;
+    --opacity-3: 0.50;
+    --opacity-4: 0.60;
+    --opacity-5: 0.75;
+    --opacity:1;
+    
+    /* Font */
+    --main-font: 'Poppins', sans-serif;
+    --headline-font: 'Fredoka', sans-serif;
+}
+
+/* General CSS */
+html {
+    overflow-y: overlay;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(var(--black), var(--opacity-2));
+    /* border-radius: 10px; */
+    background-color: rgb(var(--white));
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(var(--white));
+}
+
+::-webkit-scrollbar-thumb {
+    /* border-radius: 10px; */
+    background: rgb(var(--primary));
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold !important;
+}
+
+a {
+    color: rgb(var(--primary));
+}
+
+a:hover {
+    color: rgb(var(--secondary));
+}
+
+/* Main CSS */
+#product-detail {
+    padding-top: 20vh;
+}
+
+.new-arrival {
+    user-select: none;
+    background: rgb(var(--primary));
+    width: 50px;
+    color: rgb(var(--white));
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.product-name {
+    font-size: 2rem;
+    font-weight: 200 !important;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.4rem;
+}
+
+.product-code, .product-stock {
+    margin: 0 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.product-stock {
+    font-weight: 500;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #242f3f;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: scale-down;
+    filter: drop-shadow(5px 5px 1rem rgba(var(--black), var(--opacity)));
+    overflow: hidden;
+}
+
+.ratings i {
+    user-select: none;
+    font-size: 1rem;
+    color: goldenrod;
+}
+
+.product-detail {
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+.detail-heading, .keyword-heading {
+    font-size: 1.2rem;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.product-description {
+    color: rgb(var(--black), var(--opacity-2));
+    width: 100%;
+}
+
+.keywords {
+    user-select: none;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: rgb(var(--white));
+    background: rgb(var(--primary));
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    transition: 0.2s;
+    transition-timing-function: ease;
+}
+
+.keywords:hover {
+    background: rgb(var(--secondary));
+}
+
+.estimate-price a {
+    text-transform: uppercase;
+    background: rgb(var(--black));
+    color: rgb(var(--white));
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 0;
+    box-shadow: 0 0 1px rgb(var(--primary));
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    box-shadow: 0px 0 0 rgb(var(--secondary)) inset;
+}
+
+.estimate-price a:hover {
+    box-shadow: 350px 0 0 rgb(var(--primary)) inset;
+    color: rgb(var(--white));
+}
+
+.modal {
+    position: relative;
+    z-index: 10002 !important;
+}
+
+.estimate h2 {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 200 !important;
+}
+
+.estimate p.USD {
+    font-size: 1.4rem;
+}
+
+.estimate p.price-fill {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.estimate p.price-pcs {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.disclaimer {
+    margin-top: 4rem;
+}
+
+.disclaimer h4 {
+    text-align: start;
+    font-weight: 200 !important;
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+.selection h4 {
+    text-align: start;
+    font-weight: 200 !important;
+    text-transform: uppercase;
+}
+
+.material-select, .glue-select {
+    margin-bottom: 2rem;
+}
+
+.radio-tile-group {
+    display: flex;
+    justify-content: start;
+}
+
+.input-container {
+    position: relative;
+    height: 8rem;
+    width: 8rem;
+    margin: 0.5rem;
+}
+
+.input-container input {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+}
+
+.input-container .radio-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 2px solid rgb(var(--primary));
+    border-radius: 8px;
+    transition: all 300ms ease;
+}
+
+.input-container label {
+    user-select: none;
+    color: rgb(var(--primary));
+    font-size: 0.80rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input:checked+.radio-tile {
+    background-color: rgb(var(--primary));
+    transform: scale(1.1);
+}
+
+input:hover+.radio-tile {
+    box-shadow: 0 0 12px rgb(var(--secondary));
+}
+
+input:checked+.radio-tile label {
+    color: rgb(var(--white));
+}
+
+.dropdown {
+    min-width: 15rem;
+    position: relative;
+}
+
+.dropdown * {
+    box-sizing: border-box;
+}
+
+.dropdown-select {
+    color: rgb(var(--primary));
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px rgb(var(--primary)) solid;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.dropdown-select:hover, .dropdown-select.clicked, .number-select:hover {
+    box-shadow: 0 0 0.8rem rgb(var(--primary));
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent; 
+    border-top: 6px solid rgb(var(--primary));
+    transition: 0.3s;
+}
+
+.caret.rotate {
+    transform: rotate(180deg);
+}
+
+.dropdown-main {
+    list-style: none;
+    padding: 0.2rem 0.5rem;
+    max-height: 10rem;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    background: rgb(var(--white));
+    border: 1px rgb(var(--primary)) solid;
+    box-shadow: 0 0.5rem 1rem rgba(var(--black), var(--opacity-1));
+    border-radius: 0.5rem;
+    color: rgb(var(--primary));
+    font-weight: 500;
+    position: absolute;
+    top: -90%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    transition: visibility 0s, background 0.3s ease, opacity 0.3s ease;
+}
+
+.dropdown-main::-webkit-scrollbar {
+    display: none;
+}
+
+.dropdown-main li {
+    user-select: none;
+    scroll-snap-align: center;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    padding: 0.7rem 0.5rem;
+    margin: 0.3rem 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.dropdown-main li:hover, .dropdown-main-active {
+    color: rgb(var(--white));
+    background: rgb(var(--primary));
+}
+
+.dropdown-main.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.number-select {
+    min-width: 15rem;
+    position: relative;
+    padding: 1rem;
+    margin: 0.5rem;
+    color: rgb(var(--primary));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px rgb(var(--primary)) solid;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+.number-select i {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    transition: 0.3s;
+}
+
+.number-select i:hover {
+    color: rgb(var(--secondary));
+}
+
+.number-select i:first-of-type:hover {
+    transform: translateX(-1rem);
+}
+
+.number-select i:last-of-type:hover {
+    transform: translateX(1rem);
+}
+
+.num-input::-webkit-outer-spin-button, .num-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.num-input {
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    background: none;
+    width: auto;
+    border: none;
+    outline: none;
+}
+
+.headline {
+    margin-top: 3rem;
+}
+
+.certification img {
+    filter: contrast(0) brightness(1) saturate(1) sepia(0%) hue-rotate(0deg);
+    opacity: var(--opacity-5);
+    max-height: 180px;
+    margin: auto;
+    display: block;
+}
+
+.certification img:hover {
+    animation: cert_hover 0.3s forwards;
+}
+
+.cert-img {
+    max-height: 30vh !important;
+}
+
+.cert-title {
+    text-transform: uppercase;
+    font-weight: 200 !important;
+    font-size: 1.25rem;
+}
+
+.cert-desc {
+    font-size: 0.8rem;
+    color: rgba(var(--black), var(--opacity-4));
+}
+
+.cert-link {
+    font-size: 0.8rem !important;
+}
+
+
+/* Responsive */
+@media screen and (min-width: 576px) {
+
+}
+
+@media screen and (min-width: 768px) {
+    .product-name {
+        text-align: start;
+    }
+    .product-code, .product-stock {
+        text-align: start;
+    }
+    .product-detail {
+        text-align: justify;
+    }
+    .product-description {
+        font-size: 0.9rem;
+    }
+    .detail-heading, .keyword-heading {
+        text-align: start;
+    }
+    .cert-title {
+        font-size: 1.5rem;
+    }
+    .cert-img {
+        max-height: 40vh;
+    }
+    .cert-desc {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 998px) {
+    .cert-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .product-name {
+        font-size: 2.75rem;
+    }
+    .product-description {
+        width: 95%;
+    }
+    .estimate h2 {
+        font-size: 3.5rem;
+    }
+    .estimate p.USD {
+        font-size: 2rem;
+    }
+    
+    .estimate p.price-fill {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+    
+    .estimate p.price-pcs {
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .cert-title {
+        font-size: 2rem;
+    }
+}
+
+@keyframes cert_hover {
+    from {
+        opacity: var(--opacity-5);
+        filter: contrast(0) brightness(1) saturate(1) sepia(0%) hue-rotate(0deg);
+    }
+    to {
+        opacity: var(--opacity);
+        filter: contrast(0) brightness(1) saturate(1) sepia(100%) hue-rotate(60deg);
+    }
+}

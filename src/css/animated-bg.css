@@ -1,0 +1,179 @@
+/* Background CSS */
+.bg-wrapper {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgb(var(--body)), rgba(var(--black), 0.1));
+}
+
+.bg-wrapper img {
+    position: absolute;
+    top: 10vh;
+    right: -10vh;
+    width: 150vh;
+    height: 150vh;
+    object-fit: cover;
+    opacity: 0.04;
+    filter: blur(5px);
+    animation: float 50s ease infinite alternate;
+}
+
+.box div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    filter: blur(1px);
+}
+
+.box div:nth-child(odd) {
+    --box-color: rgb(var(--primary));
+    border: 5px solid var(--box-color);
+}
+
+.box div:nth-child(even) {
+    --box-color: rgb(var(--black));
+    border: 5px solid var(--box-color);
+}
+
+.box div:nth-child(3n) {
+    background-color: var(--box-color);
+}
+
+.box div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: box-animate-cw 5s linear infinite alternate;
+    animation-delay: 0.2s;
+}
+
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: box-animate-cw 7s linear infinite alternate;
+    animation-delay: 0s;
+}
+
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: box-animate-ccw 8s linear infinite alternate;
+    animation-delay: 0.4s;
+}
+
+.box div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: box-animate-ccw 4s linear infinite alternate;
+    animation-delay: 0.5s;
+}
+
+.box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: box-animate-cw 6s linear infinite alternate;
+    animation-delay: 0.3s;
+}
+
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: box-animate-cw 8s linear infinite alternate;
+    animation-delay: 0.1s;
+}
+
+.box div:nth-child(7) {
+    top: 60%;
+    left: 27%;
+    animation: box-animate-ccw 4s linear infinite alternate;
+    animation-delay: 0.2s;
+}
+
+.box div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: box-animate-ccw 6s linear infinite alternate;
+    animation-delay: 0s;
+}
+
+.box div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: box-animate-cw 5s linear infinite alternate;
+    animation-delay: 0.4s;
+}
+
+.box div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: box-animate-cw 7s linear infinite alternate;
+    animation-delay: 0.6s;
+}
+
+.box div:nth-child(11) {
+    top: 35%;
+    left: 41%;
+    animation: box-animate-ccw 7s linear infinite alternate;
+    animation-delay: 0.2s;
+}
+
+.box div:nth-child(12) {
+    top: 69%;
+    left: 62%;
+    animation: box-animate-ccw 8s linear infinite alternate;
+    animation-delay: 0.3s;
+}
+
+.box div:nth-child(13) {
+    top: 90%;
+    left: 90%;
+    animation: box-animate-cw 9s linear infinite alternate;
+    animation-delay: 0.2s;
+}
+
+.box div:nth-child(14) {
+    top: 45%;
+    left: 77%;
+    animation: box-animate-cw 4s linear infinite alternate;
+    animation-delay: 0s;
+}
+
+.box div:nth-child(15) {
+    top: 35%;
+    left: 55%;
+    animation: box-animate-ccw 5s linear infinite alternate;
+    animation-delay: 0.4s;
+}
+
+@keyframes box-animate-cw {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1) translateY(-50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes box-animate-ccw {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1) translateY(50px) rotate(-360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-25%);
+    }
+}

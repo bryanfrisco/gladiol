@@ -1,0 +1,37 @@
+{
+"carb":
+    {
+        "name":"California Air Resource Board",
+        "desc":"Tujuan yang dinyatakan dari CARB termasuk mencapai dan mempertahankan kualitas udara yang sehat; melindungi masyarakat dari paparan kontaminan udara beracun; dan menyediakan pendekatan inovatif untuk mematuhi peraturan dan regulasi polusi udara."
+    },
+"ce":
+    {
+        "name":"Conformite Europeenne",
+        "desc":"Conformite europeenne adalah perintah penyesuaian tanda yang terdapat pada banyak produk yang ditempatkan pada pasar tunggal dalam kawasan ekonomi eropa (european economic area) dan barang-barang ekspor dari luar negeri."
+    },
+"fsc":
+    {
+        "name":"Forest Stewardship Council",
+        "desc":"Lembaga non-profit yang mendedikasikan organisasinya untuk mempromosikan mengenai tanggung jawab pengelolaan hutan di dunia. Berupaya menjadi katalis utama dan kekuatan yang menentukan untuk pengelolaan hutan yang lebih baik dan transformasi pasar, yang mengubah tren hutan global menuju pemanfaatan berkelanjutan, konservasi, restorasi, dan penghormatan terhadap semua."
+    },
+"i91":
+    {
+        "name":"ISO-9001",
+        "desc":"ISO 9000 adalah seperangkat standard untuk Sistem Manajemen Mutu (SMM) yang dirumuskan oleh TC 176 ISO, sebuah organisasi internasional di bidang standarisasi."
+    },
+"i141":
+    {
+        "name":"ISO-14001",
+        "desc":"ISO 14000 Series merupakan seperangkat standard internasional bidang menajemen lingkungan yang dimaksudkan untuk memban organisasi di seluruh dunia dalam meningkatkan efektivitas kegiatan pengelolaan lingkungannya"
+    },
+"jas":
+    {
+        "name":"Japanese Agricultural Standards",
+        "desc":"Japan agricultural services adalah standar nasional jepang di bidang pertanian, kehutanan, perikanan, dan industri makanan. Jas didirikan oleh kementerian pertanian, kehutanan, dan perikanan. Semua pihak dalam rantai produksi harus menjalani pengujian produk dan audit pabrik. Pengujian produk harus dilakukan di lab uji badan penilai sertifikasi (cab)."
+    },
+"i274":
+    {
+        "name":"ISO-2074 Plywood",
+        "desc":"ISO 2074 adalah Standar Internasional dari badan ISO (International Organization for Standardization) mengenai Kosakata terkait Kayu lapis atau Plywood"
+    }
+}

@@ -1,0 +1,268 @@
+/* Navigation Bar */
+.fancy-navbar {
+    position: fixed;
+    z-index: 10000;
+    height: 15vh;
+    background: rgba(var(--black), var(--opacity-0));
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.fancy-navbar:hover, .fancy-navbar.scrolled {
+    background: rgba(var(--primary), var(--opacity));
+}
+
+.fancy-navbar.scrolled-down {
+    transform: translateY(-100%);
+}
+
+.fancy-navbar.scrolled-up {
+    transform: translateY(0);
+}
+
+.blank-space {
+    opacity: 0;
+}
+
+.navbar-head {
+    height: 100%;
+}
+
+.nav-lang, .fancy-navbar .navbar-head .nav-lang:hover {
+    color: rgb(var(--white));
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.fancy-navbar:hover .nav-lang, .fancy-navbar.scrolled .nav-lang {
+    color: rgb(var(--black));
+}
+
+.lang-container {
+    position: relative;
+}
+
+.lang-switcher::after {
+    position: absolute;
+    width: 9rem;
+    opacity: 0;
+    color: rgba(var(--black), var(--opacity));
+    left: 2rem;
+    top: 1.25rem;
+    content: "Switch";
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.lang-switcher:has(.nav-lang:hover)::after {
+    color: rgba(var(--white), var(--opacity));
+    opacity: 1;
+    top: 0.25rem;
+}
+
+.nav-logo {
+    width: 50px;
+}
+
+.nav-button {
+    z-index: 10001;
+    font-size: 2rem;
+    -webkit-appearance: none;
+    color: rgb(var(--white));
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.fancy-navbar .navbar-head .nav-button:hover {
+    color: rgb(var(--white));
+}
+
+.fancy-navbar .navbar-head .nav-button:checked:hover {
+    color: rgb(var(--primary));
+}
+
+.nav-button:checked {
+    position: fixed;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.fancy-navbar:hover .nav-button, .fancy-navbar.scrolled .nav-button {
+    color: rgb(var(--black));
+}
+
+.nav-button:checked::before {
+    content: '\f00d';
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.navbar-content {
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    padding: 0 10%;
+    text-transform: uppercase;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.navbar-content a {
+    z-index: 10000;
+    font-size: 2rem;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(var(--black), var(--opacity-3));
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 0.25rem;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.navbar-content a:hover {
+    color: transparent;
+    -webkit-text-stroke: 0px;
+}
+
+.navbar-content a::before {
+    z-index: 10000;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(var(--primary), var(--opacity-5));
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+
+.navbar-content a:hover::before {
+    clip-path: polygon(0 0, 100% 0, 99% 100%, 0 100%);
+}
+
+.navbar-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background:  url("../assets/media/navbar/home.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 9999;
+    transition: all 0.2s linear;
+}
+
+.navbar-bg-img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #EEE, 70%, transparent);
+}
+
+.navbar-content a:hover:nth-child(2) ~ .navbar-bg-img {
+    background:  url("../assets/media/navbar/about.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-content a:hover:nth-child(3) ~ .navbar-bg-img {
+    background:  url("../assets/media/navbar/services.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-content a:hover:nth-child(4) ~ .navbar-bg-img {
+    background:  url("../assets/media/navbar/collections.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-content a:hover:nth-child(5) ~ .navbar-bg-img {
+    background:  url("../assets/media/navbar/contact-us.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-head:has(.nav-button:checked) ~ .navbar-content {
+    left: 0;
+}
+
+.fancy-navbar:has(.nav-button:checked) {
+    transform: translateY(0);
+}
+
+.nav-up {
+    text-align: center;
+    position: fixed;
+    z-index: 9999;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    transform: translateY(300%);
+    transition: all 0.3s ease;
+}
+
+.nav-up-button {
+    background: rgb(var(--primary));
+    border-radius: 50%;
+    font-size: 1.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.nav-up-button i {
+    vertical-align: middle;
+    transition: all 0.3s ease;
+    color: rgb(var(--black));
+}
+
+.nav-up-button:hover i {
+    color: rgb(var(--white));
+}
+
+.nav-up.scrolled {
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media screen and (min-width: 576px) {
+    .navbar-content a {
+        font-size: 2.75rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-content a {
+        font-size: 3.25rem;
+    }
+}
+
+@media screen and (min-width: 998px) {
+    .navbar-content a {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar-content a {
+        font-size: 4rem;
+    }
+}

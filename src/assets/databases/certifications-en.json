@@ -1,0 +1,37 @@
+{
+"carb":
+    {
+        "name":"California Air Resource Board",
+        "desc":"The stated goals of the CARB include achieving non-contaminant healthy air quality, protecting the public from exposure to toxic air contaminants, and providing innovative approaches to complying with air pollution rules and regulations."
+    },
+"ce":
+    {
+        "name":"Conformite Europeenne",
+        "desc":"An order to adjust the mark found on many products placed on the single market in the European Economic Area and goods exported from abroad."
+    },
+"fsc":
+    {
+        "name":"Forest Stewardship Council",
+        "desc":"A non-profit organization dedicated to promoting responsible forest management around the world. It strives to be the primary catalyst and defining force for better forest management and market transformation, changing the global forest trend towards sustainable use, conservation, restoration, and respect for all."
+    },
+"i91":
+    {
+        "name":"ISO-9001",
+        "desc":"ISO 9000 is a set of standards for Quality Management Systems (QMS) formulated by TC 176 ISO, an international organization in the field of standardization."
+    },
+"i141":
+    {
+        "name":"ISO-14001",
+        "desc":"ISO 14000 is a set of international standards in the field of environmental management which is intended to assist organization around the world in increasing the effectiveness of their environmental management activities."
+    },
+"jas":
+    {
+        "name":"Japanese Agricultural Standards",
+        "desc":"A Japanese National Standard in agriculture, forestry, fisheries, and the food industry. JAS was founded by the Ministry of Agriculture, Forestry, and Fisheries of Japan. All parties in the production chain are subject to product testing and factory audits. Product testing must be carried out in the Certification Assessment Body (CAB) test lab."
+    },
+"i274":
+    {
+        "name":"ISO 2074 Standard Plywood",
+        "desc":"ISO 2074 is an International Standard created by ISO (International Organization for Standardization) that controls any kind of product that vocabulary related to Plywood"
+    }
+}
